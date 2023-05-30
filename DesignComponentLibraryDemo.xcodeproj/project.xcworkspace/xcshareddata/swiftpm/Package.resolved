@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "designcomponentlibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Aliubit/DesignComponentLibrary.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6fdf59d0ff3dbf86eb9086169a02d170fe603588"
+      }
+    }
+  ],
+  "version" : 2
+}

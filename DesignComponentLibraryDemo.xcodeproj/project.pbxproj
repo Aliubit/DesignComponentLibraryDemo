@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3E436C012A26253B0030A1DA /* DesignComponentLibraryDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436C002A26253B0030A1DA /* DesignComponentLibraryDemoApp.swift */; };
-		3E436C032A26253B0030A1DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436C022A26253B0030A1DA /* ContentView.swift */; };
+		3E436C032A26253B0030A1DA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E436C022A26253B0030A1DA /* LoginView.swift */; };
 		3E436C052A26253D0030A1DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E436C042A26253D0030A1DA /* Assets.xcassets */; };
 		3E436C082A26253D0030A1DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E436C072A26253D0030A1DA /* Preview Assets.xcassets */; };
+		3E436C102A26255C0030A1DA /* DesignComponentLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 3E436C0F2A26255C0030A1DA /* DesignComponentLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E436BFD2A26253B0030A1DA /* DesignComponentLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignComponentLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E436C002A26253B0030A1DA /* DesignComponentLibraryDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignComponentLibraryDemoApp.swift; sourceTree = "<group>"; };
-		3E436C022A26253B0030A1DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E436C022A26253B0030A1DA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3E436C042A26253D0030A1DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E436C072A26253D0030A1DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E436C102A26255C0030A1DA /* DesignComponentLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +53,8 @@
 		3E436BFF2A26253B0030A1DA /* DesignComponentLibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3E436C112A2625B70030A1DA /* Login */,
 				3E436C002A26253B0030A1DA /* DesignComponentLibraryDemoApp.swift */,
-				3E436C022A26253B0030A1DA /* ContentView.swift */,
 				3E436C042A26253D0030A1DA /* Assets.xcassets */,
 				3E436C062A26253D0030A1DA /* Preview Content */,
 			);
@@ -65,6 +67,14 @@
 				3E436C072A26253D0030A1DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E436C112A2625B70030A1DA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3E436C022A26253B0030A1DA /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = DesignComponentLibraryDemo;
+			packageProductDependencies = (
+				3E436C0F2A26255C0030A1DA /* DesignComponentLibrary */,
+			);
 			productName = DesignComponentLibraryDemo;
 			productReference = 3E436BFD2A26253B0030A1DA /* DesignComponentLibraryDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 3E436BF42A26253B0030A1DA;
+			packageReferences = (
+				3E436C0E2A26255C0030A1DA /* XCRemoteSwiftPackageReference "DesignComponentLibrary" */,
+			);
 			productRefGroup = 3E436BFE2A26253B0030A1DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E436C032A26253B0030A1DA /* ContentView.swift in Sources */,
+				3E436C032A26253B0030A1DA /* LoginView.swift in Sources */,
 				3E436C012A26253B0030A1DA /* DesignComponentLibraryDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E436C0E2A26255C0030A1DA /* XCRemoteSwiftPackageReference "DesignComponentLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Aliubit/DesignComponentLibrary.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E436C0F2A26255C0030A1DA /* DesignComponentLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E436C0E2A26255C0030A1DA /* XCRemoteSwiftPackageReference "DesignComponentLibrary" */;
+			productName = DesignComponentLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E436BF52A26253B0030A1DA /* Project object */;
 }
