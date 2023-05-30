@@ -14,9 +14,7 @@ struct LoginView: View {
                 userNameField
                 passwordField
                 Spacer()
-                CustomButton(text: "Login") {
-                    validatePassword()
-                }
+                loginButton
             }
             .padding(Dimensions.Spacing.systemThirtyThree)
             .navigationBarTitle("InputField Demo")
@@ -44,12 +42,18 @@ struct LoginView: View {
                        maxCharLimit: 8,
                        trailingIcon: InputComponent.TrailingIcon(icon: isSecure ? .eye : .eyeSlash, accessibilityName: isSecure ? "Show pin" : "Hide pin", action: {
             self.isSecure.toggle()
-            toggleKeyboard()
+            closeKeyboard()
         }),
                        onFinishEditing: validatePassword)
     }
 
-    func toggleKeyboard() {
+    var loginButton: some View {
+        CustomButton(text: "Login") {
+            validatePassword()
+        }
+    }
+
+    func closeKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 
